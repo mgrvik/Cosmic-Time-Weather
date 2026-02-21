@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Weather Buddy
+Comment=Weather app for tracking remote colleagues' conditions
+Exec=/home/ryan/.local/bin/weather-buddy
+Path=/home/ryan/weather-buddy
+Icon=weather-clear-symbolic
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;
+StartupNotify=true
+X-GNOME-UsesNotifications=true

@@ -1,0 +1,63 @@
+[project]
+name = "weather-buddy"
+version = "1.0.0"
+description = "A beautiful weather app for GNOME/COSMIC to track weather for remote colleagues"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    {name = "Weather Buddy Team"}
+]
+keywords = ["weather", "gnome", "gtk", "cosmic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "PyGObject>=2.0.0",
+    "aiohttp>=3.9.0",
+    "pytz>=2024.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0.0",
+    "pylint>=3.0.0",
+    "mypy>=1.8.0",
+]
+
+[project.scripts]
+weather-buddy = "src.main:main"
+
+[project.urls]
+Homepage = "https://github.com/weather-buddy/weather-buddy"
+Repository = "https://github.com/weather-buddy/weather-buddy.git"
+Issues = "https://github.com/weather-buddy/weather-buddy/issues"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.pylint.messages_control]
+disable = ["C0114", "C0115", "C0116"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
