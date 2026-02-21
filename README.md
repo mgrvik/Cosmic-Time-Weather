@@ -28,9 +28,7 @@ Perfect for remote workers who want to quickly check the weather conditions of t
 
 ## Screenshots
 
-| Light Mode | Dark Mode |
-|------------|-----------|
-| ![Light Mode](screenshots/light-mode.png) | ![Dark Mode](screenshots/dark-mode.png) |
+![Weather Buddy](screenshots/main-window.png)
 
 ## Requirements
 
